@@ -94,6 +94,48 @@
   #modal .nm { font: 600 13px Cinzel, Georgia, serif; letter-spacing: 0.05em; }
   #modal .price { display: flex; align-items: center; gap: 8px; white-space: nowrap; font-size: 13px; }
   #modal .price .ui { position: static; padding: 3px 9px; font-size: 11px; opacity: 0.45; }
+
+  /* inventory: a lighter, warmer bronze, rounded slots and raised metal buttons */
+  #modal .box.invbox { background: radial-gradient(ellipse at 50% 0%, #4a3f2f, transparent 70%), linear-gradient(#3a3226, #29231a);
+                       border-color: rgba(214,182,118,0.75); color: #eadfc4;
+                       box-shadow: 0 14px 44px rgba(0,0,0,0.7), inset 0 0 0 4px rgba(20,15,10,0.45), inset 0 0 0 5px rgba(214,182,118,0.3); }
+  #modal .invbox .title { color: #f3dfa6; text-shadow: 0 1px 0 #000, 0 0 12px rgba(240,200,120,0.25); }
+  #modal .invbox .rule { margin: 8px auto 12px; background: linear-gradient(90deg, transparent, rgba(220,186,120,0.9), transparent); }
+  #modal .invbox .hint { opacity: 0.6; color: #e2d4b2; }
+  #modal .invbox .inv { gap: 14px; flex-wrap: wrap; }
+  #modal .invbox .pane { padding: 9px 11px 5px; border: 1px solid rgba(214,182,118,0.32); border-radius: 6px;
+                         background: linear-gradient(rgba(255,236,196,0.07), rgba(255,236,196,0.02)); box-shadow: inset 0 1px 0 rgba(255,236,196,0.08), 0 2px 6px rgba(0,0,0,0.25); }
+  #modal .invbox .sub { opacity: 0.85; color: #e6cf94; }
+  #modal .invbox .slots { gap: 8px; }
+  #modal .invbox .slot { width: 44px; height: 44px; border-radius: 6px; border: 1px solid rgba(214,182,118,0.5);
+                         background: radial-gradient(circle at 50% 30%, #5a4e3d, #352d22 80%);
+                         box-shadow: inset 0 2px 5px rgba(0,0,0,0.45), inset 0 -1px 0 rgba(255,236,196,0.08), 0 1px 0 rgba(255,236,196,0.06); transition: border-color 0.12s, box-shadow 0.12s, transform 0.12s; }
+  #modal .invbox .slot.item:hover { border-color: rgba(240,210,140,0.9); transform: translateY(-1px); }
+  #modal .invbox .slot.item.on { border-color: rgba(246,214,138,1); box-shadow: inset 0 2px 5px rgba(0,0,0,0.4), 0 0 10px rgba(240,200,120,0.55); }
+  #modal .invbox .slot.over { border-color: rgba(255,226,150,1); box-shadow: inset 0 2px 5px rgba(0,0,0,0.4), 0 0 12px rgba(250,215,140,0.7); }
+  #modal .invbox .slot span { color: #eadfc4; opacity: 0.5; }
+  #modal .invbox .slot.eqs { width: 34px; height: 34px; border-radius: 50%; }
+  #modal .invbox .slot.eqs span { font-size: 7.5px; opacity: 0.6; }
+  #modal .invbox .doll { width: 260px; height: 232px; }
+  #modal .invbox .doll .wire { position: absolute; left: 0; top: 0; width: 260px; height: 232px; }
+  #modal .invbox .doll .wire path { fill: none; stroke: rgba(214,182,118,0.35); stroke-width: 1; stroke-dasharray: 3 3; }
+  #modal .invbox .doll .mc { left: 98px; top: 46px; width: 64px; height: 64px; border-color: #d6b676; box-shadow: 0 0 0 3px #2a2219, 0 0 0 4px rgba(214,182,118,0.4), 0 4px 12px rgba(0,0,0,0.5); }
+  #modal .invbox .card { border-radius: 8px; background: linear-gradient(#44392a, #2c251b); border-color: rgba(214,182,118,0.85); color: #eadfc4;
+                         box-shadow: 0 12px 32px rgba(0,0,0,0.7), inset 0 1px 0 rgba(255,236,196,0.12); }
+  #modal .invbox .card .stats { color: #e2d6ba; border-top-color: rgba(214,182,118,0.3); }
+  #modal .invbox .chead .ic { border-radius: 6px; background: radial-gradient(circle at 50% 30%, #5a4e3d, #352d22 80%); }
+  #modal .invbox .cardwrap { background: rgba(20,15,10,0.45); border-radius: 2px; }
+  #modal .invbox .ui { position: relative; padding: 8px 18px; border-radius: 6px; border: 1px solid #b8955a; color: #f6e6bc; font-size: 12px;
+                       text-shadow: 0 1px 1px rgba(0,0,0,0.7); cursor: pointer;
+                       background: linear-gradient(#6e5a3c, #4a3b26 55%, #3c3020);
+                       box-shadow: inset 0 1px 0 rgba(255,232,180,0.35), inset 0 -2px 0 rgba(0,0,0,0.25), 0 2px 0 #1d160e, 0 4px 8px rgba(0,0,0,0.45);
+                       transition: filter 0.12s, transform 0.08s, box-shadow 0.08s; }
+  #modal .invbox .ui:hover { filter: brightness(1.15); }
+  #modal .invbox .ui:active { transform: translateY(2px); box-shadow: inset 0 1px 3px rgba(0,0,0,0.5), 0 0 0 #1d160e; }
+  #modal .invbox .ui.primary { color: #2b1d0c; border-color: #f2d48c; text-shadow: 0 1px 0 rgba(255,240,200,0.5);
+                               background: linear-gradient(#f4dc9a, #d4ab5a 50%, #b48a3e); }
+  #modal .invbox .ui.drop { color: #ffe3dc; border-color: #c46a58; background: linear-gradient(#a2463a, #7a2c22 55%, #5e1f18); }
+  #modal .invbox .title .x { float: right; width: 30px; height: 30px; padding: 0; border-radius: 50%; font-size: 18px; line-height: 27px; text-align: center; }
 </style>
 </head>
 <body>
@@ -3911,7 +3953,7 @@ function playerDied() {
 // ---------- popups ----------
 const modalEl = document.getElementById('modal'), modalBox = modalEl.querySelector('.box');
 function openModal(html, buttons) {
-  modalBox.style.width = ''; modalBox.style.padding = '';
+  modalBox.style.width = ''; modalBox.style.padding = ''; modalBox.classList.remove('invbox');
   modalBox.innerHTML = html + '<div class="btns"></div>';
   const row = modalBox.querySelector('.btns');
   for (const b of buttons) {
@@ -4033,17 +4075,18 @@ function openInventory() {
   const eq = (key, x, y) => `<div style="position:absolute;left:${x}px;top:${y}px">${cell(inv.eq[key], `data-t="e" data-i="${key}"`, inv.eq[key] ? '' : EQ_LABEL[key], ' eqs' + (inv.eq[key] && player.weapon === inv.eq[key] ? ' on' : ''))}</div>`;
   openModal(`<div class="title">Inventory<button class="ui x" id="invx">&times;</button></div><div class="rule"></div><div class="inv">
     <div class="pane"><div class="sub">Quick select</div>
-      <div class="slots" style="grid-template-columns: repeat(2, 40px)">${inv.quick.map((e, i) => cell(e, `data-t="q" data-i="${i}"`, i + 1)).join('')}</div></div>
+      <div class="slots" style="grid-template-columns: repeat(2, 44px)">${inv.quick.map((e, i) => cell(e, `data-t="q" data-i="${i}"`, i + 1)).join('')}</div></div>
     <div class="pane"><div class="sub">Inventory</div>
-      <div class="slots" style="grid-template-columns: repeat(4, 40px)">${inv.bag.map((e, i) => cell(e, `data-t="b" data-i="${i}"`)).join('')}</div></div>
+      <div class="slots" style="grid-template-columns: repeat(4, 44px)">${inv.bag.map((e, i) => cell(e, `data-t="b" data-i="${i}"`)).join('')}</div></div>
     <div class="pane"><div class="sub">Equipment</div>
       <div class="doll">
+        <svg class="wire" viewBox="0 0 260 232"><path d="M130 17 V46 M63 53 L102 66 M197 53 L158 66 M63 53 L17 103 M197 53 L243 103 M130 110 V137 M130 137 L87 175 M130 137 L173 175 M87 175 V215 M173 175 V215"/></svg>
         <canvas class="mc" width="120" height="120"></canvas>
-        ${eq('helm', 84, 0)}${eq('armL', 34, 40)}${eq('armR', 134, 40)}${eq('handL', 6, 80)}${eq('handR', 162, 80)}
-        ${eq('core', 84, 118)}${eq('legL', 46, 156)}${eq('legR', 122, 156)}${eq('footL', 46, 194)}${eq('footR', 122, 194)}
+        ${eq('helm', 113, 0)}${eq('armL', 46, 36)}${eq('armR', 180, 36)}${eq('handL', 0, 86)}${eq('handR', 226, 86)}
+        ${eq('core', 113, 120)}${eq('legL', 70, 158)}${eq('legR', 156, 158)}${eq('footL', 70, 198)}${eq('footR', 156, 198)}
       </div></div></div><div class="hint">Tap an item for details.<br>Hold and drag to move it.</div>`, []);
   modalBox.querySelector('.btns').style.display = 'none';
-  modalBox.style.width = 'min(640px, 96vw)'; modalBox.style.padding = '10px 14px 12px';
+  modalBox.style.width = 'min(720px, 96vw)'; modalBox.style.padding = '12px 18px 14px'; modalBox.classList.add('invbox');
   modalBox.querySelector('#invx').onclick = closeModal;
   try { const m = modalBox.querySelector('.mc'), g = m.getContext('2d'), r = 30 * DPR; g.drawImage(cv, 46 * DPR - r, 46 * DPR - r, r * 2, r * 2, 0, 0, 120, 120); } catch (e) {}
   const addr = el => ({ t: el.dataset.t, i: el.dataset.t === 'e' ? el.dataset.i : +el.dataset.i });
